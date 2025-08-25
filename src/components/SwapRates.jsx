@@ -1,41 +1,37 @@
-import React from 'react';
-import { RefreshCw } from 'lucide-react';
+import React from "react";
+import { RefreshCw } from "lucide-react";
+import Nigeria from "../assets/images/Nigeria.png";
+import tron from "../assets/images/tron.jpg";
 
 const SwapRates = () => {
   return (
-    <div className="bg-gray-900 rounded-lg p-6 text-white">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center space-x-2">
-          <RefreshCw className="w-5 h-5" />
-          <span className="font-medium">Swap Rates</span>
+    <div className="bg-gray-900 rounded-lg p-4 text-white">
+      <div className="flex items-center space-x-4">
+        {/* Title Section */}
+        <div className="flex items-center space-x-1">
+          <RefreshCw className="w-4 h-4" />
+          <span className="text-sm font-medium">Swap Rates</span>
+          <img src={Nigeria} alt="Nigeria" className="w-4 h-4 rounded-full" />
+          <img src={tron} alt="Tron" className="w-4 h-4 rounded-full" />
         </div>
-        <div className="flex items-center space-x-2">
-          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-          <span className="text-sm text-gray-300">Live</span>
-        </div>
-      </div>
-      
-      <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="text-lg">$1</span>
-            <span className="text-sm text-gray-300">=</span>
-            <span className="text-lg">NGN 1500.00</span>
-          </div>
-          <select className="bg-gray-800 border border-gray-700 rounded px-2 py-1 text-sm">
+
+        {/* Rate Sections */}
+        <div className="flex items-center space-x-1">
+          <select className="bg-gray-800 border border-gray-700 rounded px-1 py-0.5 text-xs">
             <option>1 NGN</option>
           </select>
+          <span className="text-sm">$1</span>
+          <span className="text-xs text-gray-300">=</span>
+          <span className="text-sm">NGN 1500.00</span>
         </div>
-        
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="text-lg">$1</span>
-            <span className="text-sm text-gray-300">=</span>
-            <span className="text-lg">NGN 1450.00</span>
-          </div>
-          <select className="bg-gray-800 border border-gray-700 rounded px-2 py-1 text-sm">
+
+        <div className="flex items-center space-x-1">
+          <select className="bg-gray-800 border border-gray-700 rounded px-1 py-0.5 text-xs">
             <option>To NGN</option>
           </select>
+          <span className="text-sm">$1</span>
+          <span className="text-xs text-gray-300">=</span>
+          <span className="text-sm">NGN 1450.00</span>
         </div>
       </div>
     </div>
