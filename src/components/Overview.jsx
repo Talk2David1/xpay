@@ -16,7 +16,7 @@ const Overview = () => {
   ];
 
   return (
-    <div className="bg-white rounded-lg p-6 border border-gray-200">
+    <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-lg">
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold">Overview</h3>
         <div className="flex items-center space-x-2">
