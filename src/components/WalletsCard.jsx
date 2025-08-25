@@ -2,9 +2,9 @@ import React from "react";
 
 const WalletsCard = () => {
   return (
-    <div className="bg-white rounded-lg p-6 shadow-lg">
+    <div className="bg-white rounded-lg p-8 shadow-lg">
       {/* Ghana Wallet */}
-      <div className="space-y-3">
+      <div className="space-y-4">
         <div className="flex items-center space-x-3">
           <div className="w-8 h-8 rounded-full border-2 flex items-center justify-center">
             <img src="/Nigeria.png" alt="Ghana" className="w-4 h-6" />
@@ -15,10 +15,10 @@ const WalletsCard = () => {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-gray-200 my-6"></div>
+      <div className="border-t border-gray-200 my-8"></div>
 
       {/* USDT Wallet */}
-      <div className="space-y-3">
+      <div className="space-y-4">
         <div className="flex items-center space-x-3">
           <div className="w-8 h-8 rounded-full flex items-center justify-center">
             <img src="/tron.jpg" alt="USDT" className="w-4 h-4" />

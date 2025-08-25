@@ -1,7 +1,7 @@
 import React from "react";
-import { RefreshCw } from "lucide-react";
 import Nigeria from "../assets/images/Nigeria.png";
 import tron from "../assets/images/tron.jpg";
+import swap from "../assets/images/swap.png";
 
 const SwapRates = () => {
   return (
@@ -9,7 +9,7 @@ const SwapRates = () => {
       <div className="flex items-center space-x-4">
         {/* Title Section */}
         <div className="flex items-center space-x-1">
-          <RefreshCw className="w-4 h-4" />
+          <img src={swap} alt="Swap" className="w-4 h-4" />
           <span className="text-sm font-medium">Swap Rates</span>
           <img src={Nigeria} alt="Nigeria" className="w-4 h-4 rounded-full" />
           <img src={tron} alt="Tron" className="w-4 h-4 rounded-full" />

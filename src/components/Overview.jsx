@@ -16,8 +16,8 @@ const Overview = () => {
   ];
 
   return (
-    <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-lg">
-      <div className="flex items-center justify-between mb-6">
+    <div className="bg-white rounded-lg p-4 border border-gray-200 shadow-lg">
+      <div className="flex items-center justify-between mb-4">
         <h3
           className="font-bold ml-10"
           style={{
@@ -42,7 +42,7 @@ const Overview = () => {
         </div>
       </div>
 
-      <div className="h-80">
+      <div className="h-64">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
@@ -79,7 +79,7 @@ const Overview = () => {
         </ResponsiveContainer>
       </div>
 
-      <div className="flex items-center justify-center space-x-6 mt-4">
+      <div className="flex items-center justify-center space-x-6 mt-3">
         <div className="flex items-center space-x-2">
           <div className="w-3 h-3 bg-gray-700 rounded-sm"></div>
           <span className="text-sm text-gray-600">Payout</span>
