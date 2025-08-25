@@ -1,24 +1,36 @@
-import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts';
-import { ChevronDown, Calendar } from 'lucide-react';
+import React from "react";
+import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from "recharts";
+import { ChevronDown, Calendar } from "lucide-react";
 
 const Overview = () => {
   const data = [
-    { month: 'JAN', payout: 20000, collection: 50000 },
-    { month: 'FEB', payout: 20000, collection: 50000 },
-    { month: 'MAR', payout: 20000, collection: 50000 },
-    { month: 'APR', payout: 20000, collection: 50000 },
-    { month: 'MAY', payout: 20000, collection: 50000 },
-    { month: 'JUN', payout: 20000, collection: 50000 },
-    { month: 'JUL', payout: 20000, collection: 50000 },
-    { month: 'AUG', payout: 20000, collection: 50000 },
-    { month: 'SEP', payout: 20000, collection: 50000 },
+    { month: "JAN", payout: 20000, collection: 50000 },
+    { month: "FEB", payout: 20000, collection: 50000 },
+    { month: "MAR", payout: 20000, collection: 50000 },
+    { month: "APR", payout: 20000, collection: 50000 },
+    { month: "MAY", payout: 20000, collection: 50000 },
+    { month: "JUN", payout: 20000, collection: 50000 },
+    { month: "JUL", payout: 20000, collection: 50000 },
+    { month: "AUG", payout: 20000, collection: 50000 },
+    { month: "SEP", payout: 20000, collection: 50000 },
   ];
 
   return (
     <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-lg">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold">Overview</h3>
+        <h3
+          className="font-bold ml-10"
+          style={{
+            fontFamily: "Manrope",
+            fontWeight: 700,
+            fontSize: "24.89px",
+            lineHeight: "100%",
+            letterSpacing: "0%",
+            color: "#6F6F6F",
+          }}
+        >
+          Overview
+        </h3>
         <div className="flex items-center space-x-2">
           <button className="flex items-center space-x-1 text-sm text-gray-600 hover:text-gray-900">
             <span>This week</span>
@@ -29,44 +41,44 @@ const Overview = () => {
           </button>
         </div>
       </div>
-      
+
       <div className="h-80">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart 
-            data={data} 
+          <BarChart
+            data={data}
             margin={{ top: 20, right: 30, left: 40, bottom: 5 }}
             barCategoryGap="20%"
           >
-            <XAxis 
-              dataKey="month" 
+            <XAxis
+              dataKey="month"
               axisLine={false}
               tickLine={false}
-              tick={{ fontSize: 12, fill: '#9CA3AF' }}
+              tick={{ fontSize: 12, fill: "#9CA3AF" }}
             />
-            <YAxis 
+            <YAxis
               axisLine={false}
               tickLine={false}
-              tick={{ fontSize: 12, fill: '#9CA3AF' }}
+              tick={{ fontSize: 12, fill: "#9CA3AF" }}
               domain={[0, 60000]}
               ticks={[0, 5000, 15000, 30000, 50000]}
               tickFormatter={(value) => `${value / 1000}K`}
             />
-            <Bar 
-              dataKey="payout" 
-              fill="#374151" 
+            <Bar
+              dataKey="payout"
+              fill="#374151"
               radius={[4, 4, 4, 4]}
               maxBarSize={12}
             />
-            <Bar 
-              dataKey="collection" 
-              fill="#1E40AF" 
+            <Bar
+              dataKey="collection"
+              fill="#1E40AF"
               radius={[4, 4, 4, 4]}
               maxBarSize={12}
             />
           </BarChart>
         </ResponsiveContainer>
       </div>
-      
+
       <div className="flex items-center justify-center space-x-6 mt-4">
         <div className="flex items-center space-x-2">
           <div className="w-3 h-3 bg-gray-700 rounded-sm"></div>

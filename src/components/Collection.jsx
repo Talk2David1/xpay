@@ -2,7 +2,7 @@ import React from 'react';
 
 const Collection = ({ amount = '$20,000.32' }) => {
   return (
-    <div className="bg-gray-800 rounded-2xl p-6 text-white">
+    <div className="rounded-2xl p-6 text-white" style={{ backgroundColor: '#1D232E' }}>
       <div className="flex items-center space-x-3 mb-4">
         <div className="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
           <svg 
@@ -25,7 +25,7 @@ const Collection = ({ amount = '$20,000.32' }) => {
         <h3 className="text-lg font-medium text-gray-300">Collection</h3>
       </div>
       
-      <div className="text-3xl font-bold">
+      <div className="font-bold break-words" style={{ fontSize: '17.34px' }}>
         {amount}
       </div>
     </div>
