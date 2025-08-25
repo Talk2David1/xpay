@@ -4,15 +4,15 @@ import { ChevronDown, Calendar } from 'lucide-react';
 
 const Overview = () => {
   const data = [
-    { month: 'JAN', payout: 25000, collection: 30000 },
-    { month: 'FEB', payout: 35000, collection: 40000 },
-    { month: 'MAR', payout: 30000, collection: 35000 },
-    { month: 'APR', payout: 45000, collection: 50000 },
-    { month: 'MAY', payout: 40000, collection: 45000 },
-    { month: 'JUN', payout: 50000, collection: 55000 },
-    { month: 'JUL', payout: 35000, collection: 40000 },
-    { month: 'AUG', payout: 45000, collection: 50000 },
-    { month: 'SEP', payout: 55000, collection: 60000 },
+    { month: 'JAN', payout: 20000, collection: 50000 },
+    { month: 'FEB', payout: 20000, collection: 50000 },
+    { month: 'MAR', payout: 20000, collection: 50000 },
+    { month: 'APR', payout: 20000, collection: 50000 },
+    { month: 'MAY', payout: 20000, collection: 50000 },
+    { month: 'JUN', payout: 20000, collection: 50000 },
+    { month: 'JUL', payout: 20000, collection: 50000 },
+    { month: 'AUG', payout: 20000, collection: 50000 },
+    { month: 'SEP', payout: 20000, collection: 50000 },
   ];
 
   return (
@@ -30,29 +30,50 @@ const Overview = () => {
         </div>
       </div>
       
-      <div className="h-64">
+      <div className="h-80">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+          <BarChart 
+            data={data} 
+            margin={{ top: 20, right: 30, left: 40, bottom: 5 }}
+            barCategoryGap="20%"
+          >
             <XAxis 
               dataKey="month" 
               axisLine={false}
               tickLine={false}
-              tick={{ fontSize: 12, fill: '#6B7280' }}
+              tick={{ fontSize: 12, fill: '#9CA3AF' }}
             />
-            <YAxis hide />
-            <Bar dataKey="payout" fill="#6B7280" radius={[2, 2, 0, 0]} />
-            <Bar dataKey="collection" fill="#1F2937" radius={[2, 2, 0, 0]} />
+            <YAxis 
+              axisLine={false}
+              tickLine={false}
+              tick={{ fontSize: 12, fill: '#9CA3AF' }}
+              domain={[0, 60000]}
+              ticks={[0, 5000, 15000, 30000, 50000]}
+              tickFormatter={(value) => `${value / 1000}K`}
+            />
+            <Bar 
+              dataKey="payout" 
+              fill="#374151" 
+              radius={[4, 4, 4, 4]}
+              maxBarSize={12}
+            />
+            <Bar 
+              dataKey="collection" 
+              fill="#1E40AF" 
+              radius={[4, 4, 4, 4]}
+              maxBarSize={12}
+            />
           </BarChart>
         </ResponsiveContainer>
       </div>
       
       <div className="flex items-center justify-center space-x-6 mt-4">
         <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
+          <div className="w-3 h-3 bg-gray-700 rounded-sm"></div>
           <span className="text-sm text-gray-600">Payout</span>
         </div>
         <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+          <div className="w-3 h-3 bg-blue-700 rounded-sm"></div>
           <span className="text-sm text-gray-600">Collection</span>
         </div>
       </div>
