@@ -64,14 +64,14 @@ const Overview = () => {
               tickFormatter={(value) => `${value / 1000}K`}
             />
             <Bar
-              dataKey="payout"
-              fill="#374151"
+              dataKey="collection"
+              fill="#1E40AF"
               radius={[4, 4, 4, 4]}
               maxBarSize={12}
             />
             <Bar
-              dataKey="collection"
-              fill="#1E40AF"
+              dataKey="payout"
+              fill="#374151"
               radius={[4, 4, 4, 4]}
               maxBarSize={12}
             />
