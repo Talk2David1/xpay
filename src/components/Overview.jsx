@@ -1,5 +1,12 @@
 import React from "react";
-import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  ResponsiveContainer,
+  ReferenceLine,
+} from "recharts";
 import { ChevronDown, Calendar } from "lucide-react";
 
 const Overview = () => {
@@ -49,6 +56,10 @@ const Overview = () => {
             margin={{ top: 20, right: 30, left: 5, bottom: 5 }}
             barCategoryGap="20%"
           >
+            <ReferenceLine y={5000} stroke="#E5E7EB" strokeDasharray="3 3" />
+            <ReferenceLine y={15000} stroke="#E5E7EB" strokeDasharray="3 3" />
+            <ReferenceLine y={30000} stroke="#E5E7EB" strokeDasharray="3 3" />
+            <ReferenceLine y={50000} stroke="#E5E7EB" strokeDasharray="3 3" />
             <XAxis
               dataKey="month"
               axisLine={false}
