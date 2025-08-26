@@ -23,7 +23,7 @@ const Overview = () => {
   ];
 
   return (
-    <div className="bg-white rounded-lg py-2 border border-gray-200 shadow-lg">
+    <div className="bg-white rounded-lg py-2 border border-gray-200 shadow-lg max-w-2xl">
       <div className="flex items-center justify-between mb-4">
         <h3
           className="font-bold ml-5"
@@ -48,7 +48,7 @@ const Overview = () => {
           </button>
         </div>
       </div>
-      <div className="h-64">
+      <div className="h-75">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
