@@ -21,15 +21,15 @@ const SwapRates = () => {
   return (
     <div className="relative">
       <div className="bg-gray-900 rounded-lg p-3 text-white">
-        <div className="flex items-center space-x-6">
+        <div className="flex items-center justify-between">
           {/* Title Section */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 ml-4">
             <img src={swap} alt="Swap" className="w-5 h-5" />
             <span className="text-sm font-medium">Swap Rates</span>
           </div>
 
           {/* First Currency Pair */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 flex-1 justify-center">
             <div
               className="flex items-center space-x-1 cursor-pointer"
               onClick={() => handleDropdownClick("first")}
@@ -46,7 +46,7 @@ const SwapRates = () => {
           </div>
 
           {/* Second Currency Pair */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 flex-1 justify-center">
             <div
               className="flex items-center space-x-1 cursor-pointer"
               onClick={() => handleDropdownClick("second")}
