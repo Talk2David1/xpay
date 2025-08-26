@@ -48,7 +48,6 @@ const Overview = () => {
           </button>
         </div>
       </div>
-
       <div className="h-64">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
@@ -90,7 +89,7 @@ const Overview = () => {
         </ResponsiveContainer>
       </div>
 
-      <div className="flex items-center justify-center space-x-6 mt-3">
+      <div className="flex items-center justify-end space-x-6 mt-3 mr-8">
         <div className="flex items-center space-x-2">
           <div className="w-3 h-3 bg-gray-700 rounded-sm"></div>
           <span className="text-sm text-gray-600">Payout</span>
