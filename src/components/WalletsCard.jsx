@@ -10,7 +10,7 @@ const WalletsCard = () => {
             <img
               src="https://res.cloudinary.com/dycukxm7r/image/upload/v1756205388/Nigeria_xblg9i.png"
               alt="Ghana"
-              className="w-4 h-6"
+              className="h-6"
             />
           </div>
           <span className="text-gray-700 font-medium">Ghana Wallet</span>
@@ -25,11 +25,12 @@ const WalletsCard = () => {
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
           <div className="w-8 h-8 rounded-full flex items-center justify-center">
-          <img
+            <img
               src="https://res.cloudinary.com/dycukxm7r/image/upload/v1756205373/Ellipse_fruwm1.png"
               alt="Ghana"
-              className="w-4 h-6"
-            /></div>
+              className="h-6"
+            />
+          </div>
           <span className="text-gray-700 font-medium">USDT Wallet</span>
         </div>
         <div className="text-3xl font-bold text-gray-900">$20,000.32</div>
