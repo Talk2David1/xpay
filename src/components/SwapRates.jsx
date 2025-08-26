@@ -71,7 +71,7 @@ const SwapRates = () => {
           <div className="fixed inset-0 z-40" onClick={closeDropdown} />
 
           {/* Dropdown Content */}
-          <div className="absolute top-full left-32 mt-2 bg-white rounded-lg shadow-lg p-4 w-64 z-50">
+          <div className="absolute top-full left-32 mt-0 bg-white rounded-lg shadow-lg p-4 w-64 z-50">
             <div className="space-y-3">
               {/* From Section */}
               <div>
