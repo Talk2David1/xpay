@@ -46,7 +46,7 @@ const Overview = () => {
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
-            margin={{ top: 20, right: 30, left: 40, bottom: 5 }}
+            margin={{ top: 20, right: 30, left: 5, bottom: 5 }}
             barCategoryGap="20%"
           >
             <XAxis
