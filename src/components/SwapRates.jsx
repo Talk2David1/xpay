@@ -19,8 +19,8 @@ const SwapRates = () => {
   };
 
   return (
-    <>
-      <div className="bg-gray-900 rounded-lg p-3 text-white relative">
+    <div className="relative">
+      <div className="bg-gray-900 rounded-lg p-3 text-white">
         <div className="flex items-center space-x-6">
           {/* Title Section */}
           <div className="flex items-center space-x-2">
@@ -64,30 +64,28 @@ const SwapRates = () => {
         </div>
       </div>
 
-      {/* Dropdown Modal */}
+      {/* Positioned Dropdown */}
       {showDropdown && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-          onClick={closeDropdown}
-        >
-          <div
-            className="bg-white rounded-lg p-4 w-80 mx-4"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="space-y-4">
+        <>
+          {/* Backdrop */}
+          <div className="fixed inset-0 z-40" onClick={closeDropdown} />
+
+          {/* Dropdown Content */}
+          <div className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg p-4 w-64 z-50">
+            <div className="space-y-3">
               {/* From Section */}
               <div>
-                <h3 className="text-gray-700 text-base font-medium mb-2">
-                  From
-                </h3>
-                <div className="border border-gray-300 rounded-lg p-2.5 flex items-center justify-between">
+                <h3 className="text-gray-700 text-sm font-medium mb-2">From</h3>
+                <div className="border border-gray-300 rounded-lg p-2 flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <img
                       src={Nigeria}
                       alt="Nigeria"
-                      className="w-5 h-5 rounded-full"
+                      className="w-4 h-4 rounded-full"
                     />
-                    <span className="text-gray-800 font-medium">NGN</span>
+                    <span className="text-gray-800 text-sm font-medium">
+                      NGN
+                    </span>
                   </div>
                   <ChevronDown className="w-4 h-4 text-gray-400" />
                 </div>
@@ -95,24 +93,26 @@ const SwapRates = () => {
 
               {/* To Section */}
               <div>
-                <h3 className="text-gray-700 text-base font-medium mb-2">To</h3>
-                <div className="border border-gray-300 rounded-lg p-2.5 flex items-center justify-between">
+                <h3 className="text-gray-700 text-sm font-medium mb-2">To</h3>
+                <div className="border border-gray-300 rounded-lg p-2 flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <img
                       src={tron}
                       alt="Tron"
-                      className="w-5 h-5 rounded-full"
+                      className="w-4 h-4 rounded-full"
                     />
-                    <span className="text-gray-800 font-medium">NGN</span>
+                    <span className="text-gray-800 text-sm font-medium">
+                      NGN
+                    </span>
                   </div>
                   <ChevronDown className="w-4 h-4 text-gray-400" />
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </>
       )}
-    </>
+    </div>
   );
 };
 
