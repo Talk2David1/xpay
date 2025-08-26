@@ -66,50 +66,48 @@ const SwapRates = () => {
 
       {/* Dropdown Modal */}
       {showDropdown && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 w-96 max-w-md mx-4">
-            <div className="space-y-6">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          onClick={closeDropdown}
+        >
+          <div
+            className="bg-white rounded-lg p-4 w-80 mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="space-y-4">
               {/* From Section */}
               <div>
-                <h3 className="text-gray-700 text-lg font-medium mb-3">From</h3>
-                <div className="border border-gray-300 rounded-lg p-3 flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
+                <h3 className="text-gray-700 text-base font-medium mb-2">
+                  From
+                </h3>
+                <div className="border border-gray-300 rounded-lg p-2.5 flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
                     <img
                       src={Nigeria}
                       alt="Nigeria"
-                      className="w-6 h-6 rounded-full"
+                      className="w-5 h-5 rounded-full"
                     />
                     <span className="text-gray-800 font-medium">NGN</span>
                   </div>
-                  <ChevronDown className="w-5 h-5 text-gray-400" />
+                  <ChevronDown className="w-4 h-4 text-gray-400" />
                 </div>
               </div>
 
               {/* To Section */}
               <div>
-                <h3 className="text-gray-700 text-lg font-medium mb-3">To</h3>
-                <div className="border border-gray-300 rounded-lg p-3 flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
+                <h3 className="text-gray-700 text-base font-medium mb-2">To</h3>
+                <div className="border border-gray-300 rounded-lg p-2.5 flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
                     <img
                       src={tron}
                       alt="Tron"
-                      className="w-6 h-6 rounded-full"
+                      className="w-5 h-5 rounded-full"
                     />
                     <span className="text-gray-800 font-medium">NGN</span>
                   </div>
-                  <ChevronDown className="w-5 h-5 text-gray-400" />
+                  <ChevronDown className="w-4 h-4 text-gray-400" />
                 </div>
               </div>
-            </div>
-
-            {/* Close button */}
-            <div className="mt-6 flex justify-end">
-              <button
-                onClick={closeDropdown}
-                className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300"
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>
