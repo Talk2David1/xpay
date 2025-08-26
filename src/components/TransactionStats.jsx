@@ -58,11 +58,11 @@ const TransactionStats = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
         {stats.map((stat, index) => (
-          <div key={index} className="space-y-2">
-            <h4 className="text-sm font-medium text-gray-600">{stat.title}</h4>
-            <div className="flex items-center justify-between">
+          <div key={index} className="space-y-3">
+            <h4 className="text-sm font-medium text-gray-500">{stat.title}</h4>
+            <div className="bg-gray-50 rounded-lg p-4 flex items-center justify-between">
               <p className="text-2xl font-bold text-gray-900">{stat.amount}</p>
-              <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">
+              <span className="bg-blue-200 text-blue-900 text-sm font-medium px-3 py-1.5 rounded-full">
                 {stat.count}
               </span>
             </div>
