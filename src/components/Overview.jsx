@@ -16,10 +16,10 @@ const Overview = () => {
   ];
 
   return (
-    <div className="bg-white rounded-lg p-4 border border-gray-200 shadow-lg">
+    <div className="bg-white rounded-lg py-2 border border-gray-200 shadow-lg">
       <div className="flex items-center justify-between mb-4">
         <h3
-          className="font-bold ml-10"
+          className="font-bold ml-5"
           style={{
             fontFamily: "Manrope",
             fontWeight: 700,

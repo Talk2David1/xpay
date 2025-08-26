@@ -60,7 +60,7 @@ const TransactionStats = () => {
         {stats.map((stat, index) => (
           <div key={index} className="space-y-3">
             <h4 className="text-sm font-medium text-gray-500">{stat.title}</h4>
-            <div className="bg-gray-50 rounded-lg p-4 flex items-center justify-between">
+            <div className="bg-white rounded-lg p-4 flex items-center justify-between shadow-sm border border-gray-100">
               <p className="text-2xl font-bold text-gray-900">{stat.amount}</p>
               <span className="bg-blue-200 text-blue-900 text-sm font-medium px-3 py-1.5 rounded-full">
                 {stat.count}
